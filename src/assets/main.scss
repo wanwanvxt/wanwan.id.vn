@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "theme";
+
+  :root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: "calt", "ss01", "cv11";
+    font-size: 16px;
+  }
+  @supports (font-variation-settings: normal) {
+    :root {
+      font-family: InterVariable, sans-serif;
+      font-size: 16px;
+    }
+  }
+
+  #app {
+    @apply relative top-0 left-0 w-full min-h-screen bg-main;
+  }
+}
+
+@layer components {
+  .feather {
+    @apply w-6 h-6 inline-block overflow-visible align-middle text-center;
+    font-size: inherit;
+  }
+}

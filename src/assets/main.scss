@@ -6,15 +6,9 @@
   @import "theme";
 
   :root {
-    font-family: Inter, sans-serif;
+    font-family: 'Lexend', sans-serif;
     font-feature-settings: "calt", "ss01", "cv11";
     font-size: 16px;
-  }
-  @supports (font-variation-settings: normal) {
-    :root {
-      font-family: InterVariable, sans-serif;
-      font-size: 16px;
-    }
   }
 
   #app {

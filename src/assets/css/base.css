@@ -1,0 +1,13 @@
+@import './_theme.css';
+
+@layer base {
+  :root {
+    font-family: 'Lexend', sans-serif;
+    font-feature-settings: 'calt', 'ss01', 'cv11';
+    font-size: 16px;
+  }
+
+  #app {
+    @apply relative top-0 left-0 w-full min-h-screen bg-main;
+  }
+}

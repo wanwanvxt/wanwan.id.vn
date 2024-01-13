@@ -11,7 +11,7 @@ import projects from '../../data/projects.json';
       v-for="(project, index) in projects"
       :key="index"
       :data="project"
-      class="mb-4 group-hover/list:opacity-50 group-hover/list:blur-[1px] hover:!opacity-100 hover:!blur-none"
+      class="mb-4 hover:!opacity-100 hover:!blur-none group-hover/list:opacity-50 group-hover/list:blur-[1px]"
     />
   </div>
 
@@ -22,7 +22,7 @@ import projects from '../../data/projects.json';
     href="https://github.com/wanwanvxt?tab=repositories"
     target="_blank"
   >
-    <span class="mr-1 group-hover:underline underline-offset-4">See more repositories</span>
-    <ArrowRight class="w-4 h-4 transition group-hover:translate-x-1" />
+    <span class="mr-1 underline-offset-4 group-hover:underline">See more repositories</span>
+    <ArrowRight class="h-4 w-4 transition group-hover:translate-x-1" />
   </a>
 </template>

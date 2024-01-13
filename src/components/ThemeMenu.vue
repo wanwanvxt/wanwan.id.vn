@@ -13,11 +13,11 @@ const { getTheme, setTheme } = useThemeStore();
   <div class="relative select-none">
     <Menu>
       <MenuButton
-        class="bg-accent hover:bg-accent-10-hover text-color text-xs px-2 py-1 rounded shadow flex items-center justify-center"
+        class="flex items-center justify-center rounded bg-accent px-2 py-1 text-xs text-color shadow hover:bg-accent-10-hover"
       >
-        <DropLetIcon class="w-3 h-3 mr-1" />
+        <DropLetIcon class="mr-1 h-3 w-3" />
         Theme
-        <ChevronDownIcon class="w-3 h-3 ml-1" />
+        <ChevronDownIcon class="ml-1 h-3 w-3" />
       </MenuButton>
 
       <Transition
@@ -28,14 +28,14 @@ const { getTheme, setTheme } = useThemeStore();
         leave-from-class="transform scale-100 opacity-100"
         leave-to-class="transform scale-95 opacity-0"
       >
-        <MenuItems class="absolute top-full right-0 mt-2 p-1 bg-accent rounded shadow">
+        <MenuItems class="absolute right-0 top-full mt-2 rounded bg-accent p-1 shadow">
           <MenuItem v-for="(theme, index) in themes" :key="index" @click="setTheme(theme)">
             <div
-              class="px-2 py-1 w-28 rounded ui-active:bg-primary text-color text-xs flex justify-between items-center cursor-pointer"
+              class="flex w-28 cursor-pointer items-center justify-between rounded px-2 py-1 text-xs text-color ui-active:bg-primary"
             >
               {{ toCapitalizedCase(theme) }}
               <CheckIcon
-                class="w-3 h-3 text-primary ui-active:text-color"
+                class="h-3 w-3 text-primary ui-active:text-color"
                 v-if="theme == getTheme()"
               />
             </div>

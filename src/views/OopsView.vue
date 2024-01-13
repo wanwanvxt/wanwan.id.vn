@@ -6,11 +6,11 @@ const router = useRouter();
 </script>
 
 <template>
-  <main class="container mx-auto py-16 flex flex-col gap-8 justify-center items-center">
-    <h1 class="font-bold text-color text-3xl">OOPS!</h1>
-    <h3 class="font-bold text-color text-lg">Page not found: {{ route.path }}</h3>
+  <main class="container mx-auto flex flex-col items-center justify-center gap-8 py-16">
+    <h1 class="text-3xl font-bold text-color">OOPS!</h1>
+    <h3 class="text-lg font-bold text-color">Page not found: {{ route.path }}</h3>
     <button
-      class="py-1 px-2 rounded shadow bg-accent-20 hover:bg-accent-20-hover active:bg-accent-30-active"
+      class="rounded bg-accent-20 px-2 py-1 shadow hover:bg-accent-20-hover active:bg-accent-30-active"
       @click="router.back()"
     >
       Back

@@ -6,11 +6,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/HomeView.vue'),
-    }, {
+      component: () => import('../views/HomeView.vue')
+    },
+    {
       path: '/:patchMatch(.*)*',
       name: 'oops',
-      component: () => import('../views/OopsView.vue'),
+      component: () => import('../views/OopsView.vue')
     }
   ]
 });

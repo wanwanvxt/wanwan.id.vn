@@ -10,14 +10,14 @@ import ListWrapper from '../components/home_view/ListWrapper.vue';
   <main class="container mx-auto md:grid md:grid-cols-2 md:gap-4">
     <!-- left -->
     <div
-      class="py-16 md:h-[calc((100vh-3.25rem))] md:flex md:flex-col md:justify-between md:sticky md:top-12"
+      class="py-16 md:sticky md:top-12 md:flex md:h-[calc((100vh-3.25rem))] md:flex-col md:justify-between"
     >
       <div class="max-sm:px-3">
-        <h1 class="text-4xl text-color font-bold">Hi, i'm Trường</h1>
-        <h2 class="text-md text-color font-semibold mt-3">A student and a noob developer!</h2>
-        <p class="text-color/60 mt-4">I build some things in my spare time.</p>
+        <h1 class="text-4xl font-bold text-color">Hi, i'm Trường</h1>
+        <h2 class="text-md mt-3 font-semibold text-color">A student and a noob developer!</h2>
+        <p class="mt-4 text-color/60">I build some things in my spare time.</p>
 
-        <span class="mt-16 flex justify-start items-center gap-5 text-color/60">
+        <span class="mt-16 flex items-center justify-start gap-5 text-color/60">
           <a
             class="hover:text-primary"
             href="https://fb.com/wanwanvxt"
@@ -48,7 +48,7 @@ import ListWrapper from '../components/home_view/ListWrapper.vue';
       <CreditApp class="max-md:hidden max-sm:px-3" />
     </div>
     <!-- right -->
-    <div class="md:pt-16 max-sm:px-3 pb-16">
+    <div class="pb-16 max-sm:px-3 md:pt-16">
       <ListWrapper />
       <CreditApp class="mt-16 md:hidden" />
     </div>

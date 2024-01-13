@@ -4,10 +4,10 @@ import ThemeMenu from './ThemeMenu.vue';
 </script>
 
 <template>
-  <header class="w-full sticky top-0 bg-main/80 backdrop-blur-3xl border-b border-accent z-[999]">
-    <div class="container mx-auto max-sm:px-2 flex items-center h-12">
-      <div class="flex-1 flex items-center justify-between">
-        <RouterLink class="text-color font-medium select-none" to="/">
+  <header class="sticky top-0 z-[999] w-full border-b border-accent bg-main/80 backdrop-blur-3xl">
+    <div class="container mx-auto flex h-12 items-center max-sm:px-2">
+      <div class="flex flex-1 items-center justify-between">
+        <RouterLink class="select-none font-medium text-color" to="/">
           <img class="feather" src="../assets/logo.svg" alt="wanwan.id.vn" />
           wanwan
         </RouterLink>

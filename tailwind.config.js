@@ -1,4 +1,5 @@
 import plugin from 'tailwindcss/plugin';
+import defaultTheme from 'tailwindcss/defaultTheme';
 import headlessuiPlugin from '@headlessui/tailwindcss';
 
 const colorsConfig = {
@@ -50,6 +51,9 @@ export default {
     extend: {
       colors: {
         ...colorsConfig
+      },
+      fontFamily: {
+        'sans': ['Lexend', ...defaultTheme.fontFamily.sans]
       }
     }
   },

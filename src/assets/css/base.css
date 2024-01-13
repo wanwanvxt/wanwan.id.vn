@@ -2,7 +2,7 @@
 
 @layer base {
   :root {
-    font-family: 'Lexend', sans-serif;
+    @apply font-sans;
     font-feature-settings: 'calt', 'ss01', 'cv11';
     font-size: 16px;
   }

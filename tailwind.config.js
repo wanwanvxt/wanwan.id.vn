@@ -1,4 +1,5 @@
 import plugin from 'tailwindcss/plugin';
+import headlessuiPlugin from '@headlessui/tailwindcss';
 
 const colorsConfig = {
   'color': 'rgb(var(--color)/<alpha-value>)',
@@ -65,6 +66,7 @@ export default {
           return { 'grid-area': value };
         }
       });
-    })
+    }),
+    headlessuiPlugin({ prefix: 'ui' })
   ]
 };

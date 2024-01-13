@@ -14,6 +14,7 @@
     "clean": "rm -rf dist && rm -rf *.tsbuildinfo"
   },
   "dependencies": {
+    "@headlessui/tailwindcss": "^0.2.0",
     "@headlessui/vue": "^1.7.17",
     "@vueuse/core": "^10.7.1",
     "pinia": "^2.1.7",

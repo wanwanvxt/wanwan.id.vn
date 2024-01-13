@@ -29,20 +29,13 @@ const { getTheme, setTheme } = useThemeStore();
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems class="absolute top-full right-0 mt-2 p-1 bg-accent rounded shadow">
-          <MenuItem
-            v-slot="{ active }"
-            v-for="(theme, index) in themes"
-            :key="index"
-            @click="setTheme(theme)"
-          >
+          <MenuItem v-for="(theme, index) in themes" :key="index" @click="setTheme(theme)">
             <div
-              class="px-2 py-1 w-28 rounded text-color text-xs flex justify-between items-center cursor-pointer"
-              :class="{ 'bg-primary': active }"
+              class="px-2 py-1 w-28 rounded ui-active:bg-primary text-color text-xs flex justify-between items-center cursor-pointer"
             >
               {{ toCapitalizedCase(theme) }}
               <CheckIcon
-                class="w-3 h-3"
-                :class="{ 'text-primary': !active, 'text-color': active }"
+                class="w-3 h-3 text-primary ui-active:text-color"
                 v-if="theme == getTheme()"
               />
             </div>

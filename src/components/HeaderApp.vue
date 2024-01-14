@@ -8,7 +8,7 @@ import ThemeMenu from './ThemeMenu.vue';
     <div class="container mx-auto flex h-12 items-center max-sm:px-2">
       <div class="flex flex-1 items-center justify-between">
         <RouterLink class="select-none font-medium text-color" to="/">
-          <img class="feather" src="../assets/logo.svg" alt="wanwan.id.vn" />
+          <img class="feather" src="/img/logo.svg" alt="wanwan.id.vn" />
           wanwan
         </RouterLink>
 

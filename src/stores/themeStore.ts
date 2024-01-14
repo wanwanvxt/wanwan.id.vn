@@ -7,7 +7,7 @@ export const themes = ['light', 'dark', 'slate', 'dracula', 'system'];
 export const useThemeStore = defineStore('theme', () => {
   const currentTheme = useStorage('theme', 'system');
 
-  function getTheme() {
+  async function getTheme() {
     return currentTheme.value;
   }
   async function setTheme(value: string) {

@@ -7,7 +7,9 @@ import HeaderApp from './components/HeaderApp.vue';
 const { getTheme, setTheme } = useThemeStore();
 
 onBeforeMount(() => {
-  setTheme(getTheme());
+  getTheme().then((value) => {
+    setTheme(value);
+  });
 });
 </script>
 

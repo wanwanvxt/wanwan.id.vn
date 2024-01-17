@@ -1,7 +1,6 @@
 import { useStorage } from '@vueuse/core';
 import { defineStore } from 'pinia';
 
-export const _themes = [];
 export const themes = ['light', 'dark', 'slate', 'dracula', 'system'];
 
 export const useThemeStore = defineStore('theme', () => {

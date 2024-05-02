@@ -31,5 +31,9 @@ export default defineNuxtConfig({
       htmlAttrs: { 'data-theme': 'system' }
     },
     rootId: 'app'
+  },
+
+  nitro: {
+    preset: "cloudflare-pages"
   }
 });

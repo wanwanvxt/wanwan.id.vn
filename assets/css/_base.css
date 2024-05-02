@@ -1,0 +1,28 @@
+@layer base {
+  :root {
+    @apply font-inter;
+    font-size: 16px;
+    font-feature-settings: 'ss01', 'cv05', 'cv08', 'cv11';
+  }
+
+  @screen sm {
+    @media (any-pointer: fine) {
+      ::-webkit-scrollbar {
+        @apply w-1.5;
+      }
+      ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        @apply rounded-lg bg-[rgb(var(--ww-scrollbar-thumb))];
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        @apply bg-[rgb(var(--ww-scrollbar-thumb-hover))];
+      }
+    }
+  }
+
+  #app {
+    @apply relative left-0 top-0 min-h-screen w-full bg-bgCol;
+  }
+}

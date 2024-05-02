@@ -1,0 +1,35 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  devtools: { enabled: true },
+
+  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', 'nuxt-headlessui'],
+
+  postcss: {
+    plugins: {
+      'postcss-import': {},
+      'postcss-mixins': {},
+      'tailwindcss/nesting': {},
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  },
+
+  headlessui: { prefix: 'ui' },
+
+  typescript: { typeCheck: true },
+
+  app: {
+    head: {
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { charset: 'utf-8' }
+      ],
+      link: [
+        { rel: 'preconnect', href: 'https://rsms.me/' },
+        { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
+      ],
+      htmlAttrs: { 'data-theme': 'system' }
+    },
+    rootId: 'app'
+  }
+});

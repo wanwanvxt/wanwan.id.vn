@@ -1,10 +1,10 @@
-import plugin from 'tailwindcss/plugin';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
 import headlessuiPlugin from '@headlessui/tailwindcss';
 
 const colorsConfig = {
-  color: 'rgb(var(--color)/<alpha-value>)',
-  main: 'rgb(var(--ww-background)/<alpha-value>)',
+  textCol: 'rgb(var(--color)/<alpha-value>)',
+  bgCol: 'rgb(var(--ww-background)/<alpha-value>)',
 
   primary: {
     DEFAULT: 'rgb(var(--ww-primary)/<alpha-value>)',
@@ -55,14 +55,22 @@ const colorsConfig = {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,vue}'],
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './app.vue',
+    './error.vue'
+  ],
   theme: {
     extend: {
       colors: {
         ...colorsConfig
       },
       fontFamily: {
-        'sans': ['Lexend', ...defaultTheme.fontFamily.sans]
+        'inter': ['Inter', ...defaultTheme.fontFamily.sans],
+        'yuruka': ['Yuruka', ...defaultTheme.fontFamily.sans]
       }
     }
   },

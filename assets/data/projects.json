@@ -1,0 +1,9 @@
+[
+  {
+    "name": "wanwan.id.vn",
+    "description": "Showcasing my featured projects.",
+    "tags": ["Nuxt", "Tailwindcss", "Typescript"],
+    "thumbnail": "/img/wanwan.png",
+    "link": "https://github.com/wanwanvxt/wanwan.id.vn"
+  }
+]

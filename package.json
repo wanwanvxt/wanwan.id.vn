@@ -6,9 +6,9 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "preview": "wrangler pages dev dist/",
+    "deploy": "wrangler pages dev dist/",
     "format": "prettier --write 'assets/' 'components/' 'layouts/' 'pages/' '*.{vue,js,ts,json}'"
   },
   "dependencies": {

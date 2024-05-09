@@ -1,6 +1,6 @@
 @layer base {
   :root {
-    @apply font-inter;
+    @apply font-mono;
     font-size: 16px;
     font-feature-settings: 'ss01', 'cv05', 'cv08', 'cv11';
   }
@@ -8,7 +8,7 @@
   @screen sm {
     @media (any-pointer: fine) {
       ::-webkit-scrollbar {
-        @apply w-1.5;
+        @apply h-1.5 w-1.5;
       }
       ::-webkit-scrollbar-track {
         @apply bg-transparent;

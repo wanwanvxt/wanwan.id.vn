@@ -1,7 +1,7 @@
 [
   {
     "name": "wanwan.id.vn",
-    "description": "Showcasing my featured projects.",
+    "description": "My portfolio site.",
     "tags": ["Nuxt", "Tailwindcss", "Typescript"],
     "thumbnail": "/img/wanwan.png",
     "link": "https://github.com/wanwanvxt/wanwan.id.vn"

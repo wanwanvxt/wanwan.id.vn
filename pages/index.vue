@@ -6,7 +6,7 @@ useHead({
 
 <template>
   <NuxtLayout>
-    <main class="flex min-h-[calc(100vh-3rem)] items-center overflow-x-hidden px-5">
+    <main class="flex min-h-[calc(100vh-3rem)] items-center justify-center overflow-x-hidden px-5">
       <div>
         <p class="text-textCol/60">Hi all. I am</p>
         <h1 class="text-3xl font-semibold text-textCol">Vũ Xuân Trường</h1>

@@ -8,7 +8,7 @@
     "dev": "nuxt dev",
     "postinstall": "nuxt prepare",
     "preview": "wrangler pages dev dist/",
-    "deploy": "wrangler pages dev dist/",
+    "deploy": "wrangler pages deploy dist/",
     "format": "prettier --write 'assets/' 'components/' 'layouts/' 'pages/' '*.{vue,js,ts,json}'"
   },
   "dependencies": {

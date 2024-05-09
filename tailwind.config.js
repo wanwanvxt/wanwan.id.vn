@@ -69,8 +69,7 @@ export default {
         ...colorsConfig
       },
       fontFamily: {
-        'inter': ['Inter', ...defaultTheme.fontFamily.sans],
-        'yuruka': ['Yuruka', ...defaultTheme.fontFamily.sans]
+        'mono': ['Roboto mono', ...defaultTheme.fontFamily.sans]
       }
     }
   },

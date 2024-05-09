@@ -9,7 +9,7 @@ useHead({
 <template>
   <NuxtLayout>
     <main class="min-h-[calc(100vh-3rem)] p-5 pb-12">
-      <h1 class="text-xl text-textCol font-semibold">MY FEATURED PROJECTS</h1>
+      <h1 class="text-xl font-semibold text-textCol">MY FEATURED PROJECTS</h1>
       <div
         class="mt-5 grid grid-cols-4 grid-rows-[min-content] gap-5 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1"
       >

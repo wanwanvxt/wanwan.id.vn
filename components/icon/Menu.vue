@@ -9,8 +9,10 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="feather feather-chevron-down"
+    class="feather feather-menu"
   >
-    <polyline points="6 9 12 15 18 9" />
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
   </svg>
 </template>

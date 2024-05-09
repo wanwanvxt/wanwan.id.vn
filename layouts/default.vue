@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const HeaderNavs: Array<NavType> = [
+const HeaderNavs: Array<HeaderNavType> = [
   { name: '_hello', href: '/' },
   { name: '_projects', href: '/projects' }
 ];

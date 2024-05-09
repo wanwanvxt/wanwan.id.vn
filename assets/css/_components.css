@@ -1,6 +1,6 @@
 @layer components {
   .feather {
-    @apply mb-0.5 inline-block h-6 w-6 overflow-visible text-center align-middle;
+    @apply inline-block h-6 w-6 overflow-visible text-center align-middle;
     font-size: inherit;
   }
 }

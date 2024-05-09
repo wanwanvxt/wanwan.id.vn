@@ -34,3 +34,6 @@ logs
 
 # VS Code
 .vscode
+
+# Wrangler
+.wrangler

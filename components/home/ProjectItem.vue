@@ -8,25 +8,63 @@ defineProps({
   <component
     :is="isExternalLink(data?.link!) ? 'a' : resolveComponent('NuxtLink')"
     :href="data?.link"
-    class="group rounded border border-accent shadow hover:bg-accent/80"
+    class="project-card"
   >
-    <img class="rounded" :src="data?.thumbnail" :alt="data?.name" />
-    <div class="p-5">
-      <h3 class="text-xl font-semibold text-textCol group-hover:text-primary">
+    <img class="thumbnail" :src="data?.thumbnail" :alt="data?.name" />
+    <div class="detail">
+      <h3 class="name">
         <span>{{ data?.name }}</span>
-        <IconArrowUpRight
-          class="ml-1 h-5 w-5 transition group-hover:-translate-y-1 group-hover:translate-x-1"
-        />
+        <IconArrowUpRight />
       </h3>
-      <p class="text-textCol/60">{{ data?.description }}</p>
-      <div class="mt-5 flex gap-3 overflow-x-scroll">
-        <span
-          v-for="tag in data?.tags"
-          :key="tag"
-          class="rounded-lg bg-accent-20 px-2 py-0.5 text-xs text-textCol"
-          >{{ tag }}</span
-        >
+      <p class="description">{{ data?.description }}</p>
+      <div class="tag-wrapper">
+        <span v-for="tag in data?.tags" :key="tag" class="tag">{{ tag }}</span>
       </div>
     </div>
   </component>
 </template>
+
+<style lang="postcss" scoped>
+.project-card {
+  @apply rounded border border-accent shadow;
+
+  .thumbnail {
+    @apply rounded;
+  }
+  .detail {
+    @apply p-5;
+
+    .name {
+      @apply text-xl font-semibold text-textCol;
+
+      .feather {
+        @apply ml-1 h-5 w-5 transition;
+      }
+    }
+    .description {
+      @apply text-textCol/60;
+    }
+    .tag-wrapper {
+      @apply mt-5 flex gap-3 overflow-x-scroll;
+
+      .tag {
+        @apply rounded-lg bg-accent-20 px-2 py-0.5 text-xs text-textCol;
+      }
+    }
+  }
+
+  &:hover {
+    @apply bg-accent/80;
+
+    .detail {
+      .name {
+        @apply text-primary;
+
+        .feather {
+          @apply -translate-y-1 translate-x-1;
+        }
+      }
+    }
+  }
+}
+</style>

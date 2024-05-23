@@ -24,6 +24,7 @@
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
+    "@wanwanvxt/vue-feathericons": "^1.1.0",
     "autoprefixer": "^10.4.19",
     "nuxt-headlessui": "^1.2.0",
     "postcss-import": "^16.1.0",

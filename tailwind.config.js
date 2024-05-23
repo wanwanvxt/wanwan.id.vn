@@ -69,7 +69,7 @@ export default {
         ...colorsConfig
       },
       fontFamily: {
-        'mono': ['Roboto Mono', ...defaultTheme.fontFamily.mono]
+        sans: ['Inter', ...defaultTheme.fontFamily.sans]
       }
     }
   },

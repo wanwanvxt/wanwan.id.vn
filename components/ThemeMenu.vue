@@ -1,12 +1,15 @@
 <script setup lang="ts">
+import { DropletIcon, CheckIcon } from '@wanwanvxt/vue-feathericons';
 const { getTheme, setTheme } = useThemeStore();
 </script>
 
 <template>
-  <div class="theme-menu">
+  <div class="relative select-none">
     <UiMenu>
-      <UiMenuButton class="menu-btn">
-        <IconDroplet />
+      <UiMenuButton
+        class="flex h-14 w-14 items-center justify-center border-l border-l-accent text-textCol/60 hover:bg-accent-10-hover hover:text-textCol"
+      >
+        <DropletIcon class="!h-6 !w-6" />
       </UiMenuButton>
 
       <Transition
@@ -17,11 +20,16 @@ const { getTheme, setTheme } = useThemeStore();
         leave-from-class="transform scale-100 opacity-100"
         leave-to-class="transform scale-95 opacity-0"
       >
-        <UiMenuItems class="menu-items">
+        <UiMenuItems class="absolute right-1 top-full mt-1 rounded bg-accent p-1 shadow">
           <UiMenuItem v-for="theme in ThemeFlag" :key="theme" @click="setTheme(theme)">
-            <button class="theme-btn">
-              <span>_{{ theme }}</span>
-              <IconCheck v-if="theme == getTheme()" />
+            <button
+              class="flex w-32 items-center justify-between rounded px-2 py-1 text-base text-textCol ui-active:bg-primary"
+            >
+              <span>{{ toCapitalizedCase(theme) }}</span>
+              <CheckIcon
+                v-if="theme == getTheme()"
+                class="h-4 w-4 text-primary ui-active:text-textCol"
+              />
             </button>
           </UiMenuItem>
         </UiMenuItems>
@@ -29,32 +37,3 @@ const { getTheme, setTheme } = useThemeStore();
     </UiMenu>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.theme-menu {
-  @apply relative select-none;
-
-  .menu-btn {
-    @apply border-l border-l-accent p-2.5 text-textCol/60;
-
-    &:hover {
-      @apply bg-accent-10-hover text-textCol;
-    }
-
-    .feather {
-      @apply h-6 w-6;
-    }
-  }
-  .menu-items {
-    @apply absolute right-1 top-full mt-1 rounded bg-accent p-1 shadow;
-
-    .theme-btn {
-      @apply flex w-32 items-center justify-between rounded px-2 py-1 text-textCol ui-active:bg-primary;
-
-      .feather {
-        @apply h-4 w-4 text-primary ui-active:text-textCol;
-      }
-    }
-  }
-}
-</style>

@@ -1,8 +1,8 @@
 @layer base {
   :root {
-    @apply font-mono;
+    @apply font-sans;
     font-size: 16px;
-    font-feature-settings: 'ss01', 'cv05', 'cv08', 'cv11';
+    font-feature-settings: 'ss01', 'cv11';
   }
 
   @screen sm {

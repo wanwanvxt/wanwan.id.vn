@@ -4,6 +4,10 @@ export default defineNuxtConfig({
 
   modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', 'nuxt-headlessui'],
 
+  tailwindcss: {
+    cssPath: '~/assets/css/main.css'
+  },
+
   postcss: {
     plugins: {
       'postcss-import': {},

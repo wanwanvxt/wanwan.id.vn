@@ -1,9 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
-
-@import '_colors.css';
-@import '_base.css';
-@import '_components.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

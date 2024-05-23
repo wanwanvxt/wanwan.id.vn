@@ -2572,6 +2572,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wanwanvxt/vue-feathericons@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@wanwanvxt/vue-feathericons@npm:1.1.0"
+  peerDependencies:
+    vue: ">= 3"
+  checksum: 10/f41d4f756b20224d5dc5f5a47ed591cb66e0e85b78d3c73d3b4c6ce919a5cf15e98c6604822f18925220143c4c1dbdbb78981f548858d59b6e1a4950a710af83
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -9298,6 +9307,7 @@ __metadata:
     "@tailwindcss/nesting": "npm:^0.0.0-insiders.565cd3e"
     "@vueuse/core": "npm:^10.9.0"
     "@vueuse/nuxt": "npm:^10.9.0"
+    "@wanwanvxt/vue-feathericons": "npm:^1.1.0"
     autoprefixer: "npm:^10.4.19"
     nuxt: "npm:^3.11.2"
     nuxt-headlessui: "npm:^1.2.0"

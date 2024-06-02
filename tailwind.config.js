@@ -1,6 +1,4 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
-import plugin from 'tailwindcss/plugin';
-import headlessuiPlugin from '@headlessui/tailwindcss';
 
 const colorsConfig = {
   textCol: 'rgb(var(--color)/<alpha-value>)',
@@ -55,38 +53,14 @@ const colorsConfig = {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './components/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './app.vue',
-    './error.vue'
-  ],
+  content: ['./index.html', './src/**/*.{ts,js,vue}'],
   theme: {
     extend: {
-      colors: {
-        ...colorsConfig
-      },
+      colors: { ...colorsConfig },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans]
       }
     }
   },
-  plugins: [
-    plugin(({ matchUtilities }) => {
-      matchUtilities({
-        'grid-areas': (value) => {
-          if (value === '') return '';
-
-          const areasList = value.split(',');
-          return { 'grid-template-areas': areasList.map((areas) => `"${areas}"`).join(' ') };
-        },
-        'area': (value) => {
-          return { 'grid-area': value };
-        }
-      });
-    }),
-    headlessuiPlugin({ prefix: 'ui' })
-  ]
+  plugins: []
 };

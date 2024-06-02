@@ -1,39 +1,36 @@
 {
   "name": "wanwan.id.vn",
-  "version": "2.0.0",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "postinstall": "nuxt prepare",
-    "preview": "wrangler pages dev dist/",
-    "deploy": "wrangler pages deploy dist/",
-    "format": "prettier --write 'assets/' 'components/' 'layouts/' 'pages/' '*.{vue,js,ts,json}'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.5.1",
-    "nuxt": "^3.11.2",
+    "@vueuse/core": "^10.10.0",
+    "@wanwanvxt/vue-feathericons": "^1.1.0",
     "pinia": "^2.1.7",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@headlessui/tailwindcss": "^0.2.0",
-    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@rushstack/eslint-patch": "^1.8.0",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-    "@vueuse/core": "^10.9.0",
-    "@vueuse/nuxt": "^10.9.0",
-    "@wanwanvxt/vue-feathericons": "^1.1.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/eslint-config-prettier": "^9.0.0",
     "autoprefixer": "^10.4.19",
-    "nuxt-headlessui": "^1.2.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-mixins": "^10.0.1",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "typescript": "^5.4.5",
-    "vue-tsc": "^1",
-    "wrangler": "^3.55.0"
-  },
-  "packageManager": "yarn@4.1.1"
+    "prettier-plugin-tailwindcss": "^0.6.1",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.8"
+  }
 }

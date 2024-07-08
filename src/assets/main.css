@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  @apply min-h-screen bg-slate-100 font-sans text-black text-base;
+  font-size: 16px;
+}

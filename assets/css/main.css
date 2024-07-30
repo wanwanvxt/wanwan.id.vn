@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-color: 210 210 210;
+  --primary-color: 0 223 126;
+  --bg-color: 20 25 28;
+  --surface-color: 255 255 255 / 0.1;
+}
+
+:root, body, #__nuxt {
+  background: rgb(var(--bg-color));
+  color: rgb(var(--text-color));
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#__nuxt {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 'appHeader' 'appBody' 'appFooter';
+  grid-template-rows: min-content 1fr min-content;
+}
+
+a {
+  color: rgb(var(--primary-color));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline wavy 0.1em;
+}
